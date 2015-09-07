@@ -1,0 +1,3 @@
+*{ margin: 0; padding: 0}
+.clear {display:block;width:0px;height:0px;clear:both;margin:0px;padding:0px;font:0/0 sans-serif;}
+ul,li{ list-style: none}

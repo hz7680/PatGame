@@ -1,0 +1,27 @@
+<?php
+class PatDao{
+    var $sqlhelper;
+    public function __construct(){
+        $this->sqlhelper=new SqlHelper(DBNAME,DBUSER,DBPWD,HOST,CHARSET);
+    }
+
+    public function getPatInfoByOpenid($openid){
+        $sql="select * from t_pat a inner join t_user b on a.userid=b.userid where b.isdeleted=0 and b.openid='$openid'";
+        return $this->sqlhelper->excuteDataArray($sql);
+    }
+
+    public function setDownUser($openid){
+        $sql="insert into t_user (openid) values ('$openid')";
+        return $this->sqlhelper->excuteNonQuery($sql);
+    }
+
+    public function getUserByOpenid($openid){
+        $sql="select * from t_user where openid='$openid' and isdeleted=0";
+        return $this->sqlhelper->excuteDataArray($sql);
+    }
+
+    public function initNewPat($userid,$patName){
+        $sql="insert into t_pat(userid,patname) values ($userid,'$patName')";
+        return $this->sqlhelper->excuteNonQuery($sql);
+    }
+}
