@@ -7,20 +7,23 @@ img{ display: block}
 .bg .bgimg{ width: 100%;}
 
 .bg .container{ width: 100%; height: 100%; position: absolute; top: 0; left: 0}
+
+.bg .container .pat_level1{ width: 70%; position: absolute; left: 10%; top: 50%}
+
 .bg .container .titlebox{ width: 80%; position: absolute; top: 2%; left: 10%}
 .bg .container .titlebox img{ width: 100%}
 
-.bg .container .levelbox{ position: absolute; top: 30%; right: 5%; border: 1px solid #c7c7c7; width: 25%; height: auto; border-radius: 8px;}
+.bg .container .levelbox{ position: absolute; top: 30%; right: 5%; border: 1px solid #c7c7c7; width: 30%; height: auto; border-radius: 8px; z-index: 999}
 .bg .container .levelbox ul{ width: 100%; border: 1px solid #492c19; border-radius: 8px; background: #86522e}
-.bg .container .levelbox ul li{ width: 100%; border-top: 1px solid #956d51; text-align: center; font-size: 0.3rem; line-height: 150%; color: #fdc30e}
+.bg .container .levelbox ul li{ width: 100%; border-top: 1px solid #956d51; text-align: center; font-size: 0.2rem; line-height: 150%; color: #fdc30e}
 .bg .container .levelbox ul li:first-child{ width: 100%; border-top: none}
-.bg .container .levelbox img{ position: absolute; left: -50%; top: -12%; height: 120%}
+.bg .container .levelbox img{ position: absolute; left: -50%; top: -12%; width: 70%}
 
 .bg .container .bottombox{ padding: 0 1%; position: absolute; left: 0; bottom: 1%}
-.bg .container .bottombox .bamboo{ width: 100%; position: absolute; top: -2%; z-index: 999}
+.bg .container .bottombox .bamboo{ width: 100%; position: absolute; top: -2%; z-index: 99}
 .bg .container .bottombox .box{ width: 80%; margin: auto; border-left: 1px solid #3fe1f5; border-right: 1px solid #3fe1f5; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; position: relative;}
 .bg .container .bottombox .box .shadow{ width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: #287111; opacity: 0.5}
-.bg .container .bottombox .box .insidebox{ width: 98%; margin: auto; border-left: 1px solid #40a5ac; border-right: 1px solid #40a5ac; padding-bottom: 2%; position: relative; z-index: 99 }
+.bg .container .bottombox .box .insidebox{ width: 98%; margin: auto; border-left: 1px solid #40a5ac; border-right: 1px solid #40a5ac; padding-bottom: 2%; position: relative; z-index: 9 }
 .bg .container .bottombox .box .insidebox .mapbox{ width: 100%; height: auto; border-radius: 5px; overflow: hidden}
 .bg .container .bottombox .box .insidebox .mapbox .map{ width: 100%;}
 .bg .container .bottombox .box .insidebox .rulelist{ width: 90%; margin: auto; margin-top: 3%; position: relative;}
