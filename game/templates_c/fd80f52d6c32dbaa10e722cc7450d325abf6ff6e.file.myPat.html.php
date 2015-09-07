@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-09-07 09:49:59
+<?php /* Smarty version Smarty-3.1.20, created on 2015-09-07 10:14:29
          compiled from "./templates/myPat.html" */ ?>
 <?php /*%%SmartyHeaderCode:116522939755eced47705a05-37893906%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fd80f52d6c32dbaa10e722cc7450d325abf6ff6e' => 
     array (
       0 => './templates/myPat.html',
-      1 => 1441590554,
+      1 => 1441592067,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.20',
   'unifunc' => 'content_55eced4789c7f7_25664566',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_55eced4789c7f7_25664566')) {function content_55eced4789c7f7_25664566($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
@@ -32,7 +32,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 <body>
     <div class="bg">
-        <img src="../public/image/bg.jpg"/>
+        <img src="../public/image/bg.jpg" class="bgimg"/>
+        <div class="container">
+            <div class="titlebox">
+                <img src="../public/image/The-title.png"/>
+            </div>
+        </div>
     </div>
 </body>
 </html><?php }} ?>
