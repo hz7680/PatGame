@@ -9,3 +9,24 @@ img{ display: block}
 .bg .container{ width: 100%; height: 100%; position: absolute; top: 0; left: 0}
 .bg .container .titlebox{ width: 80%; position: absolute; top: 2%; left: 10%}
 .bg .container .titlebox img{ width: 100%}
+
+.bg .container .levelbox{ position: absolute; top: 30%; right: 5%; border: 1px solid #c7c7c7; width: 25%; height: auto; border-radius: 8px;}
+.bg .container .levelbox ul{ width: 100%; border: 1px solid #492c19; border-radius: 8px; background: #86522e}
+.bg .container .levelbox ul li{ width: 100%; border-top: 1px solid #956d51; text-align: center; font-size: 0.3rem; line-height: 150%; color: #fdc30e}
+.bg .container .levelbox ul li:first-child{ width: 100%; border-top: none}
+.bg .container .levelbox img{ position: absolute; left: -50%; top: -12%; height: 120%}
+
+.bg .container .bottombox{ padding: 0 1%; position: absolute; left: 0; bottom: 1%}
+.bg .container .bottombox .bamboo{ width: 100%; position: absolute; top: -2%; z-index: 999}
+.bg .container .bottombox .box{ width: 80%; margin: auto; border-left: 1px solid #3fe1f5; border-right: 1px solid #3fe1f5; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; position: relative;}
+.bg .container .bottombox .box .shadow{ width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: #287111; opacity: 0.5}
+.bg .container .bottombox .box .insidebox{ width: 98%; margin: auto; border-left: 1px solid #40a5ac; border-right: 1px solid #40a5ac; padding-bottom: 2%; position: relative; z-index: 99 }
+.bg .container .bottombox .box .insidebox .mapbox{ width: 100%; height: auto; border-radius: 5px; overflow: hidden}
+.bg .container .bottombox .box .insidebox .mapbox .map{ width: 100%;}
+.bg .container .bottombox .box .insidebox .rulelist{ width: 90%; margin: auto; margin-top: 3%; position: relative;}
+.bg .container .bottombox .box .insidebox .rulelist li{ width: 100%; padding: 1% 0; overflow: auto}
+.bg .container .bottombox .box .insidebox .rulelist li img{ width: 7%; float: left;}
+.bg .container .bottombox .box .insidebox .rulelist li p{ width: 92%; float: right; font-size: 0.8rem; line-height: 150%; color: #fff; border-bottom: 2px solid #a6fd6f}
+.bg .container .bottombox .box .insidebox .btnbox{ width: 100%; text-align: center; padding-top: 3%;}
+.bg .container .bottombox .box .insidebox .btnbox a{ margin: auto;}
+.bg .container .bottombox .box .insidebox .btnbox a img{ width: 40%; margin: auto}

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-09-07 10:14:29
+<?php /* Smarty version Smarty-3.1.20, created on 2015-09-07 11:59:39
          compiled from "./templates/myPat.html" */ ?>
 <?php /*%%SmartyHeaderCode:116522939755eced47705a05-37893906%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fd80f52d6c32dbaa10e722cc7450d325abf6ff6e' => 
     array (
       0 => './templates/myPat.html',
-      1 => 1441592067,
+      1 => 1441598377,
       2 => 'file',
     ),
   ),
@@ -29,15 +29,63 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" href="../public/css/index.css"/>
     <title>我的宠物</title>
+
 </head>
 <body>
     <div class="bg">
         <img src="../public/image/bg.jpg" class="bgimg"/>
         <div class="container">
             <div class="titlebox">
-                <img src="../public/image/The-title.png"/>
+                <img src="../public/image/title.png"/>
+            </div>
+            <div class="levelbox" id="levelbox">
+                <ul>
+                    <li>等级:1</li>
+                    <li>积分:30</li>
+                    <li>金币:30</li>
+                </ul>
+                <img src="../public/image/panda-level.png" />
+            </div>
+            <div class="bottombox">
+                <img src="../public/image/bamboo.png" class="bamboo"/>
+                <div class="box">
+                    <div class="insidebox">
+                        <div class="mapbox">
+                            <img src="../public/image/map.png" class="map" />
+                        </div>
+                        <ul class="rulelist">
+                            <li>
+                                <img src="../public/image/stars.png"/>
+                                <p>规则规则规则规则规则规则规则</p>
+                            </li>
+                            <li>
+                                <img src="../public/image/stars.png"/>
+                                <p>规则规则规则规则规则规则规则</p>
+                            </li>
+                        </ul>
+                        <div class="btnbox">
+                            <a href="javascript:void(0)">
+                                <img src="../public/image/feedBtn.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        var div = document.getElementById('levelbox');
+        div.addEventListener('touchmove',function(event) {
+            event.preventDefault();//阻止其他事件
+            // 如果这个元素的位置内只有一个手指的话
+            if (event.targetTouches.length == 1) {
+                var touch = event.targetTouches[0];  // 把元素放在手指所在的位置
+                div.style.left = touch.pageX + 'px';
+                div.style.top = touch.pageY + 'px';
+                div.style.background = "";
+            }
+        },false);
+    </script>
 </body>
 </html><?php }} ?>
