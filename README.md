@@ -1,3 +1,3 @@
 # PatGame
 PatGame for WeChat
-  *微信分销小游戏
+  * 微信分销小游戏
