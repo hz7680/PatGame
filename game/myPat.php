@@ -1,7 +1,5 @@
 <?php
     require_once '../common/set_inc.php';
-
-    $_SESSION['openid']='123456';
     if(!isset($_SESSION['openid'])){
         //没有session,没有通过认证
         $weChat=new WeChat(APPID,APPSECRET,BASEPATH);
@@ -32,12 +30,10 @@
         if(empty($pat)){
             //pat为null,说明没有宠物,跳转到购买宠物的页面
             alert('no');
-//            jump(BUY_PAT_URL);
+    //            jump(BUY_PAT_URL);
             exit();
         }else{
-            //pat不为null,说明已经有宠物,跳转到个人宠物页面
-//            alert('yes');
-            jump(MY_PAT_URL);
-            exit();
+            $smarty->assign('pat',$pat);
+            $smarty->display('myPat.html');
         }
     }
