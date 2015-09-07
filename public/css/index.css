@@ -26,7 +26,7 @@ img{ display: block}
 .bg .container .bottombox .box .insidebox{ width: 98%; margin: auto; border-left: 1px solid #40a5ac; border-right: 1px solid #40a5ac; padding-bottom: 2%; position: relative; z-index: 9 }
 .bg .container .bottombox .box .insidebox .mapbox{ width: 100%; height: auto; border-radius: 5px; overflow: hidden; position: relative}
 .bg .container .bottombox .box .insidebox .mapbox .map{ width: 100%;}
-.bg .container .bottombox .box .insidebox .mapbox .mapPoint{ width: 8%; position: absolute; left: 18%; top: 80%}
+.bg .container .bottombox .box .insidebox .mapbox .mapPoint{ width: 5%; position: absolute; left: 19%; top: 84%}
 .bg .container .bottombox .box .insidebox .rulelist{ width: 90%; margin: auto; margin-top: 3%; position: relative;}
 .bg .container .bottombox .box .insidebox .rulelist li{ width: 100%; padding: 1% 0; overflow: auto}
 .bg .container .bottombox .box .insidebox .rulelist li img{ width: 7%; float: left;}
