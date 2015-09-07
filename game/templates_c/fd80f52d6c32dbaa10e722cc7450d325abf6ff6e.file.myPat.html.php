@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-09-07 14:23:33
+<?php /* Smarty version Smarty-3.1.20, created on 2015-09-07 15:00:01
          compiled from "./templates/myPat.html" */ ?>
 <?php /*%%SmartyHeaderCode:116522939755eced47705a05-37893906%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fd80f52d6c32dbaa10e722cc7450d325abf6ff6e' => 
     array (
       0 => './templates/myPat.html',
-      1 => 1441606999,
+      1 => 1441609199,
       2 => 'file',
     ),
   ),
@@ -28,6 +28,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" href="../public/css/index.css"/>
+    <script src="../public/js/jquery-1.11.2.js"></script>
+    <script src="../public/js/game.js"></script>
     <title>我的宠物</title>
 
 </head>
@@ -40,7 +42,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </div>
             <div class="levelbox" id="levelbox">
                 <ul>
-                    <li>等级:1</li>
+                    <li>等级:Lv1</li>
                     <li>积分:30</li>
                     <li>金币:30</li>
                 </ul>
@@ -53,6 +55,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <div class="insidebox">
                         <div class="mapbox">
                             <img src="../public/image/map.png" class="map" />
+                            <img src="../public/image/panda-level.png" class="mapPoint" />
                         </div>
                         <ul class="rulelist">
                             <li>
@@ -75,20 +78,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </div>
         </div>
     </div>
-    <script>
-        var div = document.getElementById('levelbox');
-        div.addEventListener('touchmove',function(event) {
-            event.preventDefault();//阻止其他事件
-            // 如果这个元素的位置内只有一个手指的话
-            if (event.targetTouches.length == 1) {
-                var touch = event.targetTouches[0];  // 把元素放在手指所在的位置
-                div.style.left = touch.pageX + 'px';
-                div.style.top = touch.pageY + 'px';
-                div.style.background = "";
-            }
-        },false);
-        var bottombox=document.getElementById('bottombox');
-        bottombox.style.width=100+'%';
-    </script>
+
 </body>
 </html><?php }} ?>

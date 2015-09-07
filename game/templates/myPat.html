@@ -7,6 +7,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" href="../public/css/index.css"/>
+    <script src="../public/js/jquery-1.11.2.js"></script>
+    <script src="../public/js/game.js"></script>
     <title>我的宠物</title>
 
 </head>
@@ -19,7 +21,7 @@
             </div>
             <div class="levelbox" id="levelbox">
                 <ul>
-                    <li>等级:1</li>
+                    <li>等级:Lv1</li>
                     <li>积分:30</li>
                     <li>金币:30</li>
                 </ul>
@@ -32,6 +34,7 @@
                     <div class="insidebox">
                         <div class="mapbox">
                             <img src="../public/image/map.png" class="map" />
+                            <img src="../public/image/panda-level.png" class="mapPoint" />
                         </div>
                         <ul class="rulelist">
                             <li>
@@ -54,20 +57,6 @@
             </div>
         </div>
     </div>
-    <script>
-        var div = document.getElementById('levelbox');
-        div.addEventListener('touchmove',function(event) {
-            event.preventDefault();//阻止其他事件
-            // 如果这个元素的位置内只有一个手指的话
-            if (event.targetTouches.length == 1) {
-                var touch = event.targetTouches[0];  // 把元素放在手指所在的位置
-                div.style.left = touch.pageX + 'px';
-                div.style.top = touch.pageY + 'px';
-                div.style.background = "";
-            }
-        },false);
-        var bottombox=document.getElementById('bottombox');
-        bottombox.style.width=100+'%';
-    </script>
+
 </body>
 </html>
