@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-09-07 17:08:10
+<?php /* Smarty version Smarty-3.1.20, created on 2015-09-08 09:20:44
          compiled from "./templates/myPat.html" */ ?>
 <?php /*%%SmartyHeaderCode:116522939755eced47705a05-37893906%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fd80f52d6c32dbaa10e722cc7450d325abf6ff6e' => 
     array (
       0 => './templates/myPat.html',
-      1 => 1441616890,
+      1 => 1441675239,
       2 => 'file',
     ),
   ),
@@ -44,7 +44,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <ul>
                     <li>等级:Lv1</li>
                     <li>积分:30</li>
-                    <li>金币:30</li>
+                    <li>关注量:30</li>
                 </ul>
                 <img src="../public/image/panda-level.png" />
             </div>
@@ -68,7 +68,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </li>
                         </ul>
                         <div class="btnbox">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" onclick="alert()">
                                 <img src="../public/image/feedBtn.png" />
                             </a>
                         </div>
@@ -79,8 +79,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>
     </div>
     <script>
-        initMap(4,6);
-        var max_i=5,max_j= 7,i= 1,j=1;
+        initMap(1,1);
+        var max_i=7,max_j= 7,i= 1,j=1;
         var time=setInterval(function(){
             if(j>=max_j){
                 i++;

@@ -19,10 +19,14 @@ var lvl1=new Array('19|84','23|80','27|75','31|71','35|67','33|58');
 var lvl2=new Array('40|58','42|55','44|58','46|61','48|63','50|52');
 var lvl3=new Array('52|60','54|62','56|64','58|66','60|68','61|60');
 var lvl4=new Array('62|67','65|72','68|72','71|69','74|66','73|56');
+var lvl5=new Array('77|50','81|40','84|35','83|26','80|24','74|7');
+var lvl6=new Array('69|14','66|16','62|16','58|22','54|27','52|18');
 pos.push(lvl1);
 pos.push(lvl2);
 pos.push(lvl3);
 pos.push(lvl4);
+pos.push(lvl5);
+pos.push(lvl6);
 function initMap(lvl,num){
     var obj=$("#mapPoint");
     console.log('x='+(lvl-1)+':y='+(num-1));
