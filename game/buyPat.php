@@ -25,17 +25,8 @@
         }
     }
     if(isset($_SESSION['openid'])){
-        $patService->setDownUser($_SESSION['openid']);
-        $pat=$patService->getPatInfoByOpenid($_SESSION['openid']);
-        if(empty($pat)){
-            //pat为null,说明没有宠物,跳转到购买宠物的页面
-//            alert('no');
-            jump(BUY_PAT_URL);
-            exit();
-        }else{
-            //pat不为null,说明已经有宠物,跳转到个人宠物页面
-//            alert('yes');
-            jump(MY_PAT_URL);
-            exit();
-        }
+        $wxpaysdk=new WXPaySDK(APPID);
+        $paySignPackage=$wxpaysdk->getSignPackage();
+        $smarty->assign('paySignPackage',$paySignPackage);
+        $smarty->display('buyPat.html');
     }

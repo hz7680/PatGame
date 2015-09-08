@@ -29,7 +29,7 @@ class WeChat{
         $json=file_get_contents($url);
         $res=json_decode($json,true);
         if(isset($res['openid'])){
-            return $openid;
+            return $res['openid'];
         }else{
             return false;
         }
