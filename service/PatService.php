@@ -23,4 +23,8 @@ class PatService{
             return null;
         }
     }
+
+    public function setDownOpenid($openid,$belong){
+        $this->patDao->setDownOpenid($openid,$belong);
+    }
 }

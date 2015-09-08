@@ -6,6 +6,7 @@
     define('MY_PAT_URL','myPat.php');
     define('APPID','');
     define('APPSECRET','');
+    define('TOKEN','');
     define('ATTENTION_PAGE','');
 
     require_once '../common/smarty.php';

@@ -24,4 +24,14 @@ class PatDao{
         $sql="insert into t_pat(userid,patname) values ($userid,'$patName')";
         return $this->sqlhelper->excuteNonQuery($sql);
     }
+
+    public function setDownOpenid($openid,$belong){
+        $sql="select count(*) from t_relation where openid='$openid'";
+        if($this->sqlhelper->excuteScalar($sql)>0){
+            $sql="update t_relation set belong='$belong' where openid='$openid'";
+        }else{
+            $sql="insert into t_relation (openid,belong) values('$openid','$belong')";
+        }
+        return $this->sqlhelper->excuteNonQuery($sql);
+    }
 }

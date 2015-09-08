@@ -21,7 +21,7 @@
             }
         }else{
             //没有跳转,需要跳转去认证页面
-            $url='';
+            $url='http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
             $weChat->Oauth_base($url);
             exit();
         }
