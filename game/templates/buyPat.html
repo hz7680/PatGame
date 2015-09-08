@@ -12,17 +12,17 @@
     <title>喂养宠物</title>
     <script>
         wx.config({
-                    debug: true,
-                    appId: '<{$signPackage.appId}>',
-                    timestamp: <{$signPackage.timestamp}>,
-        nonceStr: '<{$signPackage.nonceStr}>',
-                signature: '<{$signPackage.signature}>',
-                jsApiList: [
-                    'checkJsApi',
-                    'onMenuShareAppMessage',
-                    'onMenuShareTimeline',
-                    'chooseWXPay'
-                ]
+            debug: true,
+            appId: '<{$signPackage.appId}>',
+            timestamp: <{$signPackage.timestamp}>,
+            nonceStr: '<{$signPackage.nonceStr}>',
+            signature: '<{$signPackage.signature}>',
+            jsApiList: [
+                'checkJsApi',
+                'onMenuShareAppMessage',
+                'onMenuShareTimeline',
+                'chooseWXPay'
+            ]
         });
         wx.ready(function () {
             // 在这里调用 API
@@ -52,19 +52,33 @@
                 }
             });
         });
-        document.getElementById('buyPatBtn').onclick = function () {
-            alert();
-            wx.chooseWXPay({
-                timestamp: <{$paySignPackage.timestamp}>,
-                nonceStr: '<{$paySignPackage.nonceStr}>',
-                package: '<{$paySignPackage.package}>',
-                signType: '<{$paySignPackage.signType}>',
-                paySign: '<{$paySignPackage.paySign}>',
-                success:function(res){
-                    alert('支付成功');
-                }
-            });
-        };
+        $(function(){
+            $("#buyPatBtn").click(function(){
+                wx.chooseWXPay({
+                    timestamp: <{$paySignPackage.timestamp}>,
+                    nonceStr: '<{$paySignPackage.nonceStr}>',
+                    package: '<{$paySignPackage.package}>',
+                    signType: '<{$paySignPackage.signType}>',
+                    paySign: '<{$paySignPackage.paySign}>',
+                    success:function(res){
+                        alert('支付成功');
+                    }
+                });
+            })
+        })
+//        document.getElementById('buyPatBtn').onclick = function () {
+//            alert();
+//            wx.chooseWXPay({
+//                timestamp: <{$paySignPackage.timestamp}>,
+//                nonceStr: '<{$paySignPackage.nonceStr}>',
+//                package: '<{$paySignPackage.package}>',
+//                signType: '<{$paySignPackage.signType}>',
+//                paySign: '<{$paySignPackage.paySign}>',
+//                success:function(res){
+//                    alert('支付成功');
+//                }
+//            });
+//        };
 
     </script>
 </head>
