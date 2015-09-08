@@ -34,4 +34,12 @@ class PatDao{
         }
         return $this->sqlhelper->excuteNonQuery($sql);
     }
+
+    public function setDownUser($openid){
+        $sql="select count(*) from t_user where openid='$openid'";
+        if($this->sqlhelper->excuteScalar($sql)<1){
+            $sql="insert into t_user (openid) values('$openid')";
+            $this->sqlhelper->excuteNonQuery($sql);
+        }
+    }
 }

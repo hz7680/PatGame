@@ -27,4 +27,8 @@ class PatService{
     public function setDownOpenid($openid,$belong){
         $this->patDao->setDownOpenid($openid,$belong);
     }
+
+    public function setDownUser($openid){
+        $this->patDao->setDownUser($openid);
+    }
 }

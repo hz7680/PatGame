@@ -25,8 +25,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0333333">
-              <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+            <state vertical-scroll-proportion="-11.866667">
+              <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -37,7 +37,29 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-10.333333">
               <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-              <folding />
+              <folding>
+                <marker date="1441694748000" expanded="true" signature="79:1319" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatDao.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dao/PatDao.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.77761835">
+              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+              <folding>
+                <marker date="1441695880000" expanded="true" signature="219:324" placeholder="select * fro..t_pat..." />
+                <marker date="1441695880000" expanded="true" signature="446:492" placeholder="insert into ..." />
+                <marker date="1441695880000" expanded="true" signature="617:676" placeholder="select * fro..t_user..." />
+                <marker date="1441695880000" expanded="true" signature="806:867" placeholder="insert into ..." />
+                <marker date="1441695880000" expanded="true" signature="998:1052" placeholder="select count..t_relation..." />
+                <marker date="1441695880000" expanded="true" signature="1125:1186" placeholder="update t_rel..." />
+                <marker date="1441695880000" expanded="true" signature="1222:1288" placeholder="insert into ..." />
+                <marker date="1441695880000" expanded="true" signature="1419:1469" placeholder="select count..t_user..." />
+                <marker date="1441695880000" expanded="true" signature="1542:1587" placeholder="insert into ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,6 +69,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="13.433333">
               <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/PatService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.1">
+              <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -98,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mysql.config.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mysql.config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/config/mysql.config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3558106">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="25" />
+            <state vertical-scroll-proportion="-11.366667">
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -139,24 +171,24 @@
         <option value="$PROJECT_DIR$/global/access_token.json" />
         <option value="$PROJECT_DIR$/utils/WeChat.php" />
         <option value="$PROJECT_DIR$/common/SqlHelper.class.php" />
-        <option value="$PROJECT_DIR$/common/config/mysql.config.php" />
         <option value="$PROJECT_DIR$/model/Pat.class.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/public/css/index.css" />
         <option value="$PROJECT_DIR$/public/js/game.js" />
         <option value="$PROJECT_DIR$/game/templates/myPat.html" />
-        <option value="$PROJECT_DIR$/service/PatService.php" />
-        <option value="$PROJECT_DIR$/dao/PatDao.php" />
         <option value="$PROJECT_DIR$/test/test.php" />
         <option value="$PROJECT_DIR$/common/jssdk.php" />
         <option value="$PROJECT_DIR$/game/myPat.php" />
         <option value="$PROJECT_DIR$/utils/jssdk.php" />
         <option value="$PROJECT_DIR$/common/set_inc.php" />
         <option value="$PROJECT_DIR$/game/templates/feed.html" />
-        <option value="$PROJECT_DIR$/game/index.php" />
         <option value="$PROJECT_DIR$/game/feed.php" />
         <option value="$PROJECT_DIR$/interface/WeChatInterface.php" />
         <option value="$PROJECT_DIR$/common/sqlhelper.php" />
+        <option value="$PROJECT_DIR$/common/config/mysql.config.php" />
+        <option value="$PROJECT_DIR$/game/index.php" />
+        <option value="$PROJECT_DIR$/service/PatService.php" />
+        <option value="$PROJECT_DIR$/dao/PatDao.php" />
       </list>
     </option>
   </component>
@@ -258,6 +290,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PatGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PatGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -319,6 +365,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PatGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PatGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -527,14 +587,15 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="select * fro..t_pat..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="select * fro..t_user..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="select count..t_relation..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="update t_rel..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="update t_rel..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1441695880000" expanded="true" signature="219:324" placeholder="select * fro..t_pat..." />
+            <marker date="1441695880000" expanded="true" signature="446:492" placeholder="insert into ..." />
+            <marker date="1441695880000" expanded="true" signature="617:676" placeholder="select * fro..t_user..." />
+            <marker date="1441695880000" expanded="true" signature="806:867" placeholder="insert into ..." />
+            <marker date="1441695880000" expanded="true" signature="998:1052" placeholder="select count..t_relation..." />
+            <marker date="1441695880000" expanded="true" signature="1125:1186" placeholder="update t_rel..." />
+            <marker date="1441695880000" expanded="true" signature="1222:1288" placeholder="insert into ..." />
+            <marker date="1441695880000" expanded="true" signature="1419:1469" placeholder="select count..t_user..." />
+            <marker date="1441695880000" expanded="true" signature="1542:1587" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
@@ -693,31 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/PatService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.733334">
-          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/PatDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.5">
-          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-          <folding>
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="select * fro..t_pat..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="select * fro..t_user..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="select count..t_relation..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="update t_rel..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="update t_rel..." />
-            <marker date="1441677053000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/SqlHelper.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-40.333332">
@@ -855,19 +891,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0333333">
-          <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game/feed.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.333333">
           <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding />
+          <folding>
+            <marker date="1441694748000" expanded="true" signature="79:1319" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -905,9 +935,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/config/mysql.config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3558106">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="25" />
+        <state vertical-scroll-proportion="-11.366667">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.866667">
+          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/PatService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.1">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/PatDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77761835">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+          <folding>
+            <marker date="1441695880000" expanded="true" signature="219:324" placeholder="select * fro..t_pat..." />
+            <marker date="1441695880000" expanded="true" signature="446:492" placeholder="insert into ..." />
+            <marker date="1441695880000" expanded="true" signature="617:676" placeholder="select * fro..t_user..." />
+            <marker date="1441695880000" expanded="true" signature="806:867" placeholder="insert into ..." />
+            <marker date="1441695880000" expanded="true" signature="998:1052" placeholder="select count..t_relation..." />
+            <marker date="1441695880000" expanded="true" signature="1125:1186" placeholder="update t_rel..." />
+            <marker date="1441695880000" expanded="true" signature="1222:1288" placeholder="insert into ..." />
+            <marker date="1441695880000" expanded="true" signature="1419:1469" placeholder="select count..t_user..." />
+            <marker date="1441695880000" expanded="true" signature="1542:1587" placeholder="insert into ..." />
+          </folding>
         </state>
       </provider>
     </entry>
