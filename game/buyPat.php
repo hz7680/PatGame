@@ -1,5 +1,6 @@
 <?php
     require_once '../common/set_inc.php';
+    $_SESSION['openid']='123321';
     if(!isset($_SESSION['openid'])){
         //没有session,没有通过认证
         $weChat=new WeChat(APPID,APPSECRET,BASEPATH);
@@ -25,7 +26,7 @@
         }
     }
     if(isset($_SESSION['openid'])){
-        $wxpaysdk=new WXPaySDK(APPID);
+        $wxpaysdk=new WXPaySDK(APPID,$signPackage['timestamp'],$signPackage['nonceStr']);
         $paySignPackage=$wxpaysdk->getSignPackage();
         $smarty->assign('paySignPackage',$paySignPackage);
         $smarty->display('buyPat.html');
