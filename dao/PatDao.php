@@ -10,11 +10,6 @@ class PatDao{
         return $this->sqlhelper->excuteDataArray($sql);
     }
 
-    public function setDownUser($openid){
-        $sql="insert into t_user (openid) values ('$openid')";
-        return $this->sqlhelper->excuteNonQuery($sql);
-    }
-
     public function getUserByOpenid($openid){
         $sql="select * from t_user where openid='$openid' and isdeleted=0";
         return $this->sqlhelper->excuteDataArray($sql);
