@@ -1,10 +1,8 @@
 <?php
     require_once '../common/set_inc.php';
-
     if(isset($_GET['openid'])){
         if(!isset($_SESSION['openid'])){
             //没有session,没有通过认证
-            $weChat=new WeChat(APPID,APPSECRET,BASEPATH);
             if(isset($_GET['code'])){
                 //有code,已经完成跳转
                 $openid=$weChat->Oauth_check($_GET['code']);
@@ -29,8 +27,11 @@
                 exit();
             }
         }
-    }
-    //通过认证且已经关注公众号
-    if(isset($_SESSION['openid'])){
+        //通过认证且已经关注公众号
+        if(isset($_SESSION['openid'])){
+            $pat=$patService->getPatInfoByOpenid($_GET['openid']);
+            $smarty->assign('pat',$pat);
 
+            $smarty->display('feed.html');
+        }
     }

@@ -1,6 +1,6 @@
 <?php
 require_once '../common/set_inc.php';
-
+//define('TOKEN','hzgenius');
 $wechatObj = new wechatCallbackapiTest($sqlhelper);
 if (!isset($_GET['echostr'])) {
     $wechatObj->responseMsg();
