@@ -58,6 +58,10 @@
     <p>宠物名:<{$pat->patName}></p>
     <p>宠物等级:<{$pat->patLevel}></p>
     <p>宠物积分:<{$pat->patScore}></p>
-    <a href="javascript:void(0)">喂养</a>
+    <{if $attentionStatue}>
+        <a href="javascript:void(0)">喂养</a>
+    <{else}>
+        <a href="<{$smarty.const.ATTENTION_PAGE}>">喂养</a>
+    <{/if}>
 </body>
 </html>

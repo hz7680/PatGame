@@ -8,16 +8,18 @@
                 $openid=$weChat->Oauth_check($_GET['code']);
                 if($openid){
                     $res=$weChat->getUserInfo($openid);
+                    $_SESSION['openid']=$openid;
                     if($res['subscribe']==1){
                         //已关注
-                        $_SESSION['openid']=$openid;
+                        $smarty->assign('attentionStatue',true);
                     }else{
                         //未关注
                         //记录当前用户通过谁的宠物关注
                         $patService=new PatService();
                         $patService->setDownOpenid($openid,$_GET['openid']);
-                        jump(ATTENTION_PAGE);
-                        exit();
+//                        jump(ATTENTION_PAGE);
+//                        exit();
+                        $smarty->assign('attentionStatue',false);
                     }
                 }
             }else{
