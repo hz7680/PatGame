@@ -39,4 +39,16 @@ class PatService{
     public function getGrandChildren($children){
         return $this->patDao->getGrandChildren($children);
     }
+
+    public function getRelationTree($openid){
+        $children=$this->getChildren($openid);
+        $grandChildren=$this->getGrandChildren($children);
+        return count($children)+count($grandChildren);
+    }
+
+    public function getGoldCoin($openid){
+        $children=$this->getChildren($openid);
+        $grandChildren=$this->getGrandChildren($children);
+
+    }
 }

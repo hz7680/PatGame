@@ -58,4 +58,12 @@ class PatDao{
         $sql="select * from t_relationtree where superioropenid in($str)";
         return $this->sqlhelper->excuteDataArray($sql);
     }
+
+    public function getMoneyLogByOpenid($openid){
+
+    }
+
+    public function getMoneyLogsByOpenidArray($arr){
+        
+    }
 }
