@@ -31,4 +31,12 @@ class PatService{
     public function setDownUser($openid){
         $this->patDao->setDownUser($openid);
     }
+
+    public function getChildren($openid){
+        return $this->patDao->getChildren($openid);
+    }
+
+    public function getGrandChildren($children){
+        return $this->patDao->getGrandChildren($children);
+    }
 }

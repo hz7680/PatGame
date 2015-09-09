@@ -37,4 +37,25 @@ class PatDao{
             $this->sqlhelper->excuteNonQuery($sql);
         }
     }
+
+    public function getChildren($openid){
+        $sql="select * from t_relationtree where superioropenid='$openid'";
+        return $this->sqlhelper->excuteDataArray($sql);
+    }
+
+    public function getGrandChildren($children){
+        $res=array();
+        if(empty($children)){
+            return $res;
+        }
+        $str="";
+        for($i=0;$i<count($children);$i++){
+            if($i!=0) {
+                $str .= ",";
+            }
+            $str.="'".$children[$i]['openid']."'";
+        }
+        $sql="select * from t_relationtree where superioropenid in($str)";
+        return $this->sqlhelper->excuteDataArray($sql);
+    }
 }

@@ -38,7 +38,6 @@
             }
             $pat=$patService->getPatInfoByOpenid($_GET['openid']);
             $smarty->assign('pat',$pat);
-
             $smarty->display('feed.html');
         }
     }
