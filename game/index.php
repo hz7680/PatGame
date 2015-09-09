@@ -1,5 +1,6 @@
 <?php
     require_once '../common/set_inc.php';
+    $_SESSION['openid']='123456';
     if(!isset($_SESSION['openid'])){
         //没有session,没有通过认证
         $weChat=new WeChat(APPID,APPSECRET,BASEPATH);

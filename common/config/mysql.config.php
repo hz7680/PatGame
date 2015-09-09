@@ -6,8 +6,8 @@
 	$charset="utf8";
 
 	define('HOST','localhost');
-	define('DBUSER','db_patgame');
-	define('DBPWD','db_patgame123456');
+	define('DBUSER','root');
+	define('DBPWD','root');
 	define('DBNAME','db_patgame');
 	define('CHARSET','utf8');
 ?>

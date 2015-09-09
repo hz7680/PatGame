@@ -13,6 +13,18 @@ $(function(){
     var bottombox=document.getElementById('bottombox');
     bottombox.style.width=100+'%';
 
+    $("#lvlBtn").click(function(){
+        if($('#lvlList').width()==0){
+            $('#levelbox').css('border','1px solid #c7c7c7');
+            $('#lvlList').css('display','block');
+            $('#lvlList').animate({'width':'100%'},500);
+        }else{
+            $('#lvlList').animate({'width':'0'},500,function(){
+                $('#levelbox').css('border','none');
+                $('#lvlList').css('display','none');
+            });
+        }
+    })
 })
 var pos=new Array();
 var lvl1=new Array('19|84','23|80','27|75','31|71','35|67','33|58');

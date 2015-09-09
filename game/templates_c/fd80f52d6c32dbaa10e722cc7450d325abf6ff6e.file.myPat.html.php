@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-09-08 09:41:17
+<?php /* Smarty version Smarty-3.1.20, created on 2015-09-09 09:03:17
          compiled from "./templates/myPat.html" */ ?>
 <?php /*%%SmartyHeaderCode:116522939755eced47705a05-37893906%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fd80f52d6c32dbaa10e722cc7450d325abf6ff6e' => 
     array (
       0 => './templates/myPat.html',
-      1 => 1441676396,
+      1 => 1441760475,
       2 => 'file',
     ),
   ),
@@ -41,12 +41,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <img src="../public/image/title.png"/>
             </div>
             <div class="levelbox" id="levelbox">
-                <ul>
+                <ul id="lvlList">
                     <li>等级:Lv1</li>
                     <li>积分:30</li>
                     <li>关注量:30</li>
                 </ul>
-                <img src="../public/image/panda-level.png" />
+                <img src="../public/image/panda-level.png" id="lvlBtn" />
             </div>
             <img src="../public/image/pat/1.gif" class="pat_level1"/>
             <div class="bottombox" id="bottombox">

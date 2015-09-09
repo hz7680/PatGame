@@ -13,9 +13,9 @@ img{ display: block}
 .bg .container .titlebox{ width: 80%; position: absolute; top: 2%; left: 10%}
 .bg .container .titlebox img{ width: 100%}
 
-.bg .container .levelbox{ position: absolute; top: 30%; right: 5%; border: 1px solid #c7c7c7; width: 30%; height: auto; border-radius: 8px; z-index: 999}
-.bg .container .levelbox ul{ width: 100%; border: 1px solid #492c19; border-radius: 8px; background: #86522e}
-.bg .container .levelbox ul li{ width: 100%; border-top: 1px solid #956d51; text-align: center; font-size: 0.2rem; line-height: 150%; color: #fdc30e}
+.bg .container .levelbox{ position: absolute; top: 30%; right: 5%; /*border: 1px solid #c7c7c7;*/ width: 30%; height: auto; border-radius: 8px; z-index: 999}
+.bg .container .levelbox ul{ width: 0; display: none; border: 1px solid #492c19; border-radius: 8px; background: #86522e; }
+.bg .container .levelbox ul li{ width: 100%; border-top: 1px solid #956d51; text-align: center; font-size: 0.2rem; line-height: 150%; color: #fdc30e; overflow: hidden}
 .bg .container .levelbox ul li:first-child{ width: 100%; border-top: none}
 .bg .container .levelbox img{ position: absolute; left: -50%; top: -12%; width: 70%}
 
