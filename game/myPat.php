@@ -24,12 +24,11 @@
         }
     }
     if(isset($_SESSION['openid'])){
-
         $pat=$patService->getPatInfoByOpenid($_SESSION['openid']);
         if(empty($pat)){
             //pat为null,说明没有宠物,跳转到购买宠物的页面
-            alert('no');
-    //            jump(BUY_PAT_URL);
+//            alert('no');
+            jump(BUY_PAT_URL);
             exit();
         }else{
             $smarty->assign('pat',$pat);

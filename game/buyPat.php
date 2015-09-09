@@ -25,6 +25,12 @@
         }
     }
     if(isset($_SESSION['openid'])){
+        $pat=$patService->getPatInfoByOpenid($_SESSION['openid']);
+        if(!empty($pat)){
+            //已经有宠物了
+            jump(MY_PAT_URL);
+            exit();
+        }
         $wxpaysdk=new WXPaySDK(APPID,$signPackage['timestamp'],$signPackage['nonceStr']);
         $paySignPackage=$wxpaysdk->getSignPackage('MD5');
         $smarty->assign('paySignPackage',$paySignPackage);
