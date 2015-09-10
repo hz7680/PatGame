@@ -59,6 +59,11 @@ class PatDao{
         return $this->sqlhelper->excuteDataArray($sql);
     }
 
+    public function setDownMoneyLog($openid,$money,$prepay_id){
+        $sql="insert into t_moneylog (openid,money,prepay_id) values('$openid','$money','$prepay_id')";
+        return $this->sqlhelper->excuteNonQuery($sql);
+    }
+
     public function getMoneyLogByOpenid($openid){
 
     }

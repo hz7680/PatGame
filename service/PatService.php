@@ -46,6 +46,10 @@ class PatService{
         return count($children)+count($grandChildren);
     }
 
+    public function setDownMoneyLog($openid,$money,$prepay_id){
+        $this->patDao->setDownMoneyLog($openid,$money,$prepay_id);
+    }
+
     public function getGoldCoin($openid){
         $children=$this->getChildren($openid);
         $grandChildren=$this->getGrandChildren($children);
