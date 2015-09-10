@@ -64,11 +64,28 @@ class PatDao{
         return $this->sqlhelper->excuteNonQuery($sql);
     }
 
-    public function getMoneyLogByOpenid($openid){
+    public function getMoneyLogsByOpenid($openid){
 
     }
 
     public function getMoneyLogsByOpenidArray($arr){
-        
+        $res=array();
+        if(empty($arr)){
+            return $res;
+        }
+        $str="";
+        for($i=0;$i<count($arr);$i++){
+            if($i!=0) {
+                $str .= ",";
+            }
+            $str.="'".$arr[$i]['openid']."'";
+        }
+        $sql="select * from t_moneylog where openid in($str)";
+        return $this->sqlhelper->excuteDataArray($sql);
+    }
+
+    public function getSettings(){
+        $sql="select * from t_settings";
+        return $this->sqlhelper->excuteDataArray($sql);
     }
 }

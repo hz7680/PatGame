@@ -53,6 +53,26 @@ class PatService{
     public function getGoldCoin($openid){
         $children=$this->getChildren($openid);
         $grandChildren=$this->getGrandChildren($children);
+        $childrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($children);
+        $grandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($grandChildren);
+        $childrenMoney=0;
+        $grandChildrenMoney=0;
+        for($i=0;$i<count($childrenMoneyLog);$i++){
+            $childrenMoney+=$childrenMoneyLog[$i]['money'];
+        }
+        for($i=0;$i<count($grandChildrenMoneyLog);$i++){
+            $grandChildrenMoney+=$grandChildrenMoneyLog[$i]['money'];
+        }
+        $settings=$this->getSettings();
+        return ($childrenMoney*$settings['childpercent']+$grandChildrenMoney*$settings['grandchildpercent'])*$settings['rate'];
+    }
 
+    public function getSettings(){
+        $temp=$this->patDao->getSettings();
+        $res=array();
+        foreach($temp as $row){
+            $res[$row['key']]=$row['word'];
+        }
+        return $res;
     }
 }
