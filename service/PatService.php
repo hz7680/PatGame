@@ -43,7 +43,8 @@ class PatService{
     public function getRelationTree($openid){
         $children=$this->getChildren($openid);
         $grandChildren=$this->getGrandChildren($children);
-        return count($children)+count($grandChildren);
+        $greatGrandChildren=$this->getGrandChildren($grandChildren);
+        return count($children)+count($grandChildren)+count($greatGrandChildren);
     }
 
     public function setDownMoneyLog($openid,$money,$prepay_id){
@@ -53,18 +54,24 @@ class PatService{
     public function getGoldCoin($openid){
         $children=$this->getChildren($openid);
         $grandChildren=$this->getGrandChildren($children);
+        $greatGrandChildren=$this->getGrandChildren($children);
         $childrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($children);
         $grandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($grandChildren);
+        $greatGrandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($greatGrandChildren);
         $childrenMoney=0;
         $grandChildrenMoney=0;
+        $greatGrandChildrenMoney=0;
         for($i=0;$i<count($childrenMoneyLog);$i++){
             $childrenMoney+=$childrenMoneyLog[$i]['money'];
         }
         for($i=0;$i<count($grandChildrenMoneyLog);$i++){
             $grandChildrenMoney+=$grandChildrenMoneyLog[$i]['money'];
         }
+        for($i=0;$i<count($greatGrandChildrenMoneyLog);$i++){
+            $greatGrandChildrenMoney+=$greatGrandChildrenMoneyLog[$i]['money'];
+        }
         $settings=$this->getSettings();
-        return ($childrenMoney*$settings['childpercent']+$grandChildrenMoney*$settings['grandchildpercent'])*$settings['rate'];
+        return ($childrenMoney*$settings['childpercent']+$grandChildrenMoney*$settings['grandchildpercent']+$greatGrandChildrenMoney*$settings['greategrandchildpercent'])*$settings['rate'];
     }
 
     public function getSettings(){
