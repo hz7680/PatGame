@@ -29,7 +29,7 @@
                 exit();
             }
         }
-        //通过认证且已经关注公众号
+        //通过认证
         if(isset($_SESSION['openid'])){
             if($_SESSION['openid']==$_GET['openid']){
                 //访问的是自己分享的喂养页面,直接跳转到我的宠物页面
