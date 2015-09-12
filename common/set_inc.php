@@ -21,9 +21,9 @@
     require_once '../common/WXPaySdk.php';
 
     //微信JSSDK处理
-    $jssdk=new JSSDK(APPID,APPSECRET,BASEPATH);
-    $signPackage=$jssdk->getSignPackage();
-    $smarty->assign('signPackage',$signPackage);
+//    $jssdk=new JSSDK(APPID,APPSECRET,BASEPATH);
+//    $signPackage=$jssdk->getSignPackage();
+//    $smarty->assign('signPackage',$signPackage);
 
     $weChat=new WeChat(APPID,APPSECRET,BASEPATH);
     $patService=new PatService();
