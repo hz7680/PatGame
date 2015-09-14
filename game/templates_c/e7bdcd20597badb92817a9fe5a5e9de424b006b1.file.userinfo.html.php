@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-09-12 15:59:08
+<?php /* Smarty version Smarty-3.1.20, created on 2015-09-14 09:33:09
          compiled from "./templates/userinfo.html" */ ?>
 <?php /*%%SmartyHeaderCode:117440962655f3ce8807cf76-93864461%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7bdcd20597badb92817a9fe5a5e9de424b006b1' => 
     array (
       0 => './templates/userinfo.html',
-      1 => 1442044748,
+      1 => 1442194389,
       2 => 'file',
     ),
   ),
@@ -48,13 +48,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
     <ul class="info-list">
         <li class="info">
-            <img src="../public/image/distributors.png" />
-            我的分销商
-            <ul class="details-list"></ul>
+            <div class="title-box" onclick="showInfo(this)">
+                <img src="../public/image/distributors.png" />
+                我的分销商
+            </div>
+            <ul class="details-list">
+                <li>一级分销商: <span>8个</span></li>
+                <li>二级分销商: <span>8个</span></li>
+                <li>三级分销商: <span>8个</span></li>
+            </ul>
         </li>
         <li class="info">
-            <img src="../public/image/money.png" />
-            我的提现
+            <div class="title-box" onclick="showInfo(this)">
+                <img src="../public/image/money.png" />
+                我的提现
+            </div>
+            <ul class="details-list">
+                <li>已提现金额: <span>30</span></li>
+                <li>可提现金额: <span>30</span></li>
+            </ul>
         </li>
     </ul>
 </body>

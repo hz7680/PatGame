@@ -46,5 +46,9 @@ img{ display: block}
 
 .info-list{ width: 100%; background: #f3f3f3; overflow: auto}
 .info-list .info{ width: 100%; margin-top: 10px; font-size: 0.9rem; line-height: 300%; text-indent: 15%; background: #fff; float: left; position: relative; border-top: 1px solid #dedede}
-.info-list .info img{ width: 7%; position: absolute; left: 4%; top: 20%}
-.info-list .info .details-list{ width: 90%; margin: auto; border-top: 1px solid #dedede}
+.info-list .info .title-box{ width: 100%; height: auto; position: relative}
+.info-list .info .title-box img{ width: 7%; position: absolute; left: 4%; top: 20%}
+.info-list .info .details-list{ width: 80%; padding-left: 10%; margin: auto; border-top: 1px solid #dedede; display: none}
+.info-list .info .details-list li{ border-top: 1px solid #dedede; text-indent: 5%}
+.info-list .info .details-list li span{ float: right}
+.info-list .info .details-list li:first-child{ border-top: none}

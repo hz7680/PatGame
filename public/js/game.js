@@ -45,3 +45,7 @@ function initMap(lvl,num){
     var posArr=pos[lvl-1][num-1].split('|');
     $(obj).css('left',posArr[0]+'%').css('top',posArr[1]+'%');
 }
+
+function showInfo(obj){
+    $(obj).parent().find('.details-list').toggle();
+}

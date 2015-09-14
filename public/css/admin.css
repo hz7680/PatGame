@@ -1,0 +1,19 @@
+*{ margin: 0; padding: 0; font-weight: 100}
+.clear {display:block;width:0px;height:0px;clear:both;margin:0px;padding:0px;font:0/0 sans-serif;}
+ul,li{ list-style: none}
+img{ display: block}
+
+.top{ width: 100%; background: #3eabe7}
+.top img{ width: 100%}
+
+.center{ width: 100%; height: auto; background: #f1f1f1; overflow: auto; position: relative}
+.center .leftpart{ width: 17%; height: 100%;  background: #000; position: absolute; left: 0; top: 0 }
+.center .rightpart{ width: 83%; float: right}
+.center .rightpart .toppart{ width: 100%; background: #f5f5f5; border-bottom: 1px solid #dedede}
+.center .rightpart .toppart p{ line-height: 50px; text-indent: 20px}
+.center .rightpart .toppart p span{ float: right; margin-right: 20px;}
+.center .rightpart .contentpart{ padding: 15px;}
+.center .rightpart .contentpart .title{ text-indent: 20px; line-height: 40px; border-top: 2px solid #3eabe7; background: #fff}
+
+.bottom{ width: 100%; height: 45px; background: #5e5e5e}
+.bottom p{ text-align: center; color: #fff; line-height: 45px; font-size: 14px;}
