@@ -34,6 +34,13 @@ img{ display: block}
 .center .rightpart .contentpart .contentbox{ width: 100%; padding: 50px 0; background: #fff; border-top: 1px solid #dedede}
 .center .rightpart .contentpart .contentbox .input1{ width: 60%; display: block; margin: auto; height: 40px; margin-top: 15px; text-indent: 10px}
 
+.center .rightpart .contentpart .contentbox .pagebox{ width: 90%; padding: 30px 5%; }
+.center .rightpart .contentpart .contentbox .pagebox ul{ width: auto; float: right}
+.center .rightpart .contentpart .contentbox .pagebox ul li{ width: auto; float: left; padding: 0 10px; font-size: 12px; line-height: 25px;}
+.center .rightpart .contentpart .contentbox .pagebox ul li span{ color: #3eabe7}
+.center .rightpart .contentpart .contentbox .pagebox ul li a{ border: 1px solid #3eabe7; height: 23px; padding: 0 5px; display: block; font-size: 12px; line-height: 23px; text-decoration: none}
+.center .rightpart .contentpart .contentbox .pagebox ul li a.on{ background: #3eabe7; color: #fff;}
+
 #ruleBox{ position: relative}
 #ruleBox div{ position: relative}
 #ruleBox div a{position: absolute; height: 40px; width: 40px; display: block; background: url("../image/admin/minus.png") center center no-repeat; right: 20%; z-index: 99; top: 1px}
