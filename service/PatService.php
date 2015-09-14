@@ -32,6 +32,10 @@ class PatService{
         $this->patDao->setDownUser($openid);
     }
 
+    public function setDownUserName($openid,$username){
+        $this->patDao->setDownUserName($openid,$username);
+    }
+
     public function getChildren($openid){
         return $this->patDao->getChildren($openid);
     }

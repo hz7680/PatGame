@@ -30,12 +30,22 @@ class PatDao{
         return $this->sqlhelper->excuteNonQuery($sql);
     }
 
+    public function setDownUserName($openid,$username){
+        if($this->setDownUser($openid)){
+            $sql="update t_user set username='$username' where openid='$openid'";
+            return $this->sqlhelper->excuteNonQuery($sql);
+        }else{
+            return false;
+        }
+    }
+
     public function setDownUser($openid){
         $sql="select count(*) from t_user where openid='$openid'";
         if($this->sqlhelper->excuteScalar($sql)<1){
             $sql="insert into t_user (openid) values('$openid')";
-            $this->sqlhelper->excuteNonQuery($sql);
+            return $this->sqlhelper->excuteNonQuery($sql);
         }
+        return true;
     }
 
     public function getChildren($openid){

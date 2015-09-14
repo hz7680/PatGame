@@ -12,6 +12,9 @@
                 if($res['subscribe']==1){
                     //已关注
                     $_SESSION['openid']=$openid;
+                    //记录用户信息
+                    $username=$res['nickname'];
+                    $patService->setDownUserName($openid,$username);
                 }else{
                     //未关注
                     jump(ATTENTION_PAGE);
