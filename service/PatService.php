@@ -1,6 +1,9 @@
 <?php
 class PatService{
     var $patDao;
+    var $children;
+    var $grandChildren;
+    var $greatGrandChildren;
     public function __construct(){
         $this->patDao=new PatDao();
     }
@@ -13,6 +16,12 @@ class PatService{
         }else{
             $this->initNewPat($openid,$patName);
         }
+    }
+
+    public function initClass($openid){
+        $children=$this->getChildren($openid);
+        $grandChildren=$this->getGrandChildren($children);
+        $greatGrandChildren=$this->getGreatGrandChildren($grandChildren);
     }
 
     public function getPatInfoByOpenid($openid){
@@ -37,18 +46,25 @@ class PatService{
     }
 
     public function getChildren($openid){
-        return $this->patDao->getChildren($openid);
+        $res=$this->patDao->getChildren($openid);
+        $this->children=$res;
+        return $res;
     }
 
     public function getGrandChildren($children){
-        return $this->patDao->getGrandChildren($children);
+        $res=$this->patDao->getGrandChildren($children);
+        $this->grandChildren=$res;
+        return $res;
+    }
+
+    public function getGreatGrandChildren($grandChildren){
+        $res=$this->patDao->getGrandChildren($grandChildren);
+        $this->greatGrandChildren=$res;
+        return $res;
     }
 
     public function getRelationTree($openid){
-        $children=$this->getChildren($openid);
-        $grandChildren=$this->getGrandChildren($children);
-        $greatGrandChildren=$this->getGrandChildren($grandChildren);
-        return count($children)+count($grandChildren)+count($greatGrandChildren);
+        return count($this->children)+count($this->grandChildren)+count($this->greatGrandChildren);
     }
 
     public function setDownMoneyLog($openid,$money,$prepay_id){
@@ -56,12 +72,9 @@ class PatService{
     }
 
     public function getGoldCoin($openid){
-        $children=$this->getChildren($openid);
-        $grandChildren=$this->getGrandChildren($children);
-        $greatGrandChildren=$this->getGrandChildren($grandChildren);
-        $childrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($children);
-        $grandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($grandChildren);
-        $greatGrandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($greatGrandChildren);
+        $childrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($this->children);
+        $grandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($this->grandChildren);
+        $greatGrandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($this->greatGrandChildren);
         $childrenMoney=0;
         $grandChildrenMoney=0;
         $greatGrandChildrenMoney=0;
@@ -80,12 +93,9 @@ class PatService{
 
     public function checkUserScore($openid){
         $userinfo=$this->patDao->getUserByOpenid($openid);
-        $children=$this->getChildren($openid);
-        $grandChildren=$this->getGrandChildren($children);
-        $greatGrandChildren=$this->getGrandChildren($grandChildren);
-        $childrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($children);
-        $grandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($grandChildren);
-        $greatGrandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($greatGrandChildren);
+        $childrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($this->children);
+        $grandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($this->grandChildren);
+        $greatGrandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($this->greatGrandChildren);
         $childrenMoney=0;
         $grandChildrenMoney=0;
         $greatGrandChildrenMoney=0;
