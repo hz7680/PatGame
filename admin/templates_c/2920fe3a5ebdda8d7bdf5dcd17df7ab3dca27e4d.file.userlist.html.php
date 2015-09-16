@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-09-14 17:04:01
+<?php /* Smarty version Smarty-3.1.20, created on 2015-09-16 11:00:44
          compiled from "./templates/userlist.html" */ ?>
 <?php /*%%SmartyHeaderCode:26664761155f68294e3ce35-04456721%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2920fe3a5ebdda8d7bdf5dcd17df7ab3dca27e4d' => 
     array (
       0 => './templates/userlist.html',
-      1 => 1442221441,
+      1 => 1442372441,
       2 => 'file',
     ),
   ),
@@ -19,27 +19,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_55f68294efe816_85092420',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55f68294efe816_85092420')) {function content_55f68294efe816_85092420($_smarty_tpl) {?><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>用户管理</title>
-    <link rel="stylesheet" href="../public/css/admin.css"/>
-</head>
-<body>
-<div class="top">
-    <img src="../public/image/admin/top.jpg"/>
-</div>
-<div class="clear"></div>
+<?php if ($_valid && !is_callable('content_55f68294efe816_85092420')) {function content_55f68294efe816_85092420($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("top.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<input type="hidden" id="pagetag" value="userManage"/>
 <div class="center">
-    <div class="leftpart">
-        <ul>
-            <li><a href=""><img src="../public/image/admin/panda.png" />宠物管理</a></li>
-            <li><a href=""><img src="../public/image/admin/people.png" />会员管理</a></li>
-            <li><a href=""><img src="../public/image/admin/integral.png" />积分系统</a></li>
-            <li><a href=""><img src="../public/image/admin/exit.png" />退出系统</a></li>
-        </ul>
-    </div>
+    <?php echo $_smarty_tpl->getSubTemplate ("left.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
     <div class="rightpart">
         <div class="toppart">
             <p>您当前的位置:用户管理<span>2015年09月14日</span></p>
@@ -47,13 +32,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="contentpart">
             <p class="title">用户管理</p>
             <div class="searchbox">
+                <form action="score.php" method="get">
                 <ul>
-                    <li>会员积分大于 <input type="text" class="txtbox" value="2015"/></li>
+                    <li>会员积分大于 <input type="text" class="txtbox"/></li>
                     <li>会员积分小于 <input type="text" class="txtbox"/> </li>
                     <li>会员名称 <input type="text" class="txtbox" style="width: 100px;"/> </li>
                     <li><input type="submit" value="搜索" class="submit"/></li>
-                    <li><a href="" class="refresh">刷新</a></li>
+                    <li><a href="javascript:void(0)" onclick="refresh()" class="refresh">刷新</a></li>
                 </ul>
+                </form>
             </div>
             <div class="contentbox">
                 <table style="width: 90%; margin: auto; background: #e5e5e5;  text-align: center; line-height: 30px; font-size: 12px;" cellspacing="1">
@@ -103,9 +90,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>
     </div>
 </div>
-<div class="clear"></div>
-<div class="bottom">
-    <p>衢州市罗盘信息科技 版权所有</p>
-</div>
-</body>
-</html><?php }} ?>
+<?php echo $_smarty_tpl->getSubTemplate ("bottom.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php }} ?>

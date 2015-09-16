@@ -1,24 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>用户管理</title>
-    <link rel="stylesheet" href="../public/css/admin.css"/>
-</head>
-<body>
-<div class="top">
-    <img src="../public/image/admin/top.jpg"/>
-</div>
-<div class="clear"></div>
+<{include file="top.html"}>
+<input type="hidden" id="pagetag" value="userManage"/>
 <div class="center">
-    <div class="leftpart">
-        <ul>
-            <li><a href=""><img src="../public/image/admin/panda.png" />宠物管理</a></li>
-            <li><a href=""><img src="../public/image/admin/people.png" />会员管理</a></li>
-            <li><a href=""><img src="../public/image/admin/integral.png" />积分系统</a></li>
-            <li><a href=""><img src="../public/image/admin/exit.png" />退出系统</a></li>
-        </ul>
-    </div>
+    <{include file="left.html"}>
     <div class="rightpart">
         <div class="toppart">
             <p>您当前的位置:用户管理<span>2015年09月14日</span></p>
@@ -26,13 +9,15 @@
         <div class="contentpart">
             <p class="title">用户管理</p>
             <div class="searchbox">
+                <form action="score.php" method="get">
                 <ul>
-                    <li>会员积分大于 <input type="text" class="txtbox" value="2015"/></li>
-                    <li>会员积分小于 <input type="text" class="txtbox"/> </li>
-                    <li>会员名称 <input type="text" class="txtbox" style="width: 100px;"/> </li>
+                    <li>会员积分大于 <input type="text" class="txtbox" name="maxScore"/></li>
+                    <li>会员积分小于 <input type="text" class="txtbox" name="minScore"/> </li>
+                    <li>会员名称 <input type="text" class="txtbox" name="username" style="width: 100px;"/> </li>
                     <li><input type="submit" value="搜索" class="submit"/></li>
-                    <li><a href="" class="refresh">刷新</a></li>
+                    <li><a href="javascript:void(0)" onclick="refresh()" class="refresh">刷新</a></li>
                 </ul>
+                </form>
             </div>
             <div class="contentbox">
                 <table style="width: 90%; margin: auto; background: #e5e5e5;  text-align: center; line-height: 30px; font-size: 12px;" cellspacing="1">
@@ -82,9 +67,4 @@
         </div>
     </div>
 </div>
-<div class="clear"></div>
-<div class="bottom">
-    <p>衢州市罗盘信息科技 版权所有</p>
-</div>
-</body>
-</html>
+<{include file="bottom.html"}>

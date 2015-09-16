@@ -78,6 +78,10 @@ class PatService{
         return ($childrenMoney*$settings['childpercent']+$grandChildrenMoney*$settings['grandchildpercent']+$greatGrandChildrenMoney*$settings['greategrandchildpercent'])*$settings['rate'];
     }
 
+    public function checkUserScore($openid){
+        
+    }
+
     public function getSettings(){
         $temp=$this->patDao->getSettings();
         $res=array();
@@ -85,5 +89,13 @@ class PatService{
             $res[$row['key']]=$row['word'];
         }
         return $res;
+    }
+
+    public function setSettings($key,$word){
+        return $this->patDao->setSettings($key,$word);
+    }
+
+    public function getUserList($pagenum){
+
     }
 }

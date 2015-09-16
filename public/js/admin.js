@@ -4,3 +4,12 @@ function addRule(){
 function removeRule(obj){
     $(obj).parent().remove();
 }
+
+function refresh(){
+    location.reload(true);
+}
+
+$(function(){
+    var page=$("#pagetag").val();
+    $("#"+page).addClass('on');
+})

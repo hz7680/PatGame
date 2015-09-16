@@ -28,6 +28,7 @@
     }
     if(isset($_SESSION['openid'])){
         $pat=$patService->getPatInfoByOpenid($_SESSION['openid']);
+        $patService->checkUserScore($_SESSION['openid']);
         $relationTree=$patService->getRelationTree($_SESSION['openid']);
         $goldCoin=$patService->getGoldCoin($_SESSION['openid']);
         if(empty($pat)){

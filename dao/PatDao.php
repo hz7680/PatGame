@@ -98,4 +98,9 @@ class PatDao{
         $sql="select * from t_settings";
         return $this->sqlhelper->excuteDataArray($sql);
     }
+
+    public function setSettings($key,$word){
+        $sql="update t_settings set word='$word' where `key`='$key'";
+        return $this->sqlhelper->excuteNonQuery($sql);
+    }
 }
