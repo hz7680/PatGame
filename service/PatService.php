@@ -58,7 +58,7 @@ class PatService{
     public function getGoldCoin($openid){
         $children=$this->getChildren($openid);
         $grandChildren=$this->getGrandChildren($children);
-        $greatGrandChildren=$this->getGrandChildren($children);
+        $greatGrandChildren=$this->getGrandChildren($grandChildren);
         $childrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($children);
         $grandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($grandChildren);
         $greatGrandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($greatGrandChildren);
@@ -79,7 +79,29 @@ class PatService{
     }
 
     public function checkUserScore($openid){
-        
+        $userinfo=$this->patDao->getUserByOpenid($openid);
+        $children=$this->getChildren($openid);
+        $grandChildren=$this->getGrandChildren($children);
+        $greatGrandChildren=$this->getGrandChildren($grandChildren);
+        $childrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($children);
+        $grandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($grandChildren);
+        $greatGrandChildrenMoneyLog=$this->patDao->getMoneyLogsByOpenidArray($greatGrandChildren);
+        $childrenMoney=0;
+        $grandChildrenMoney=0;
+        $greatGrandChildrenMoney=0;
+        for($i=0;$i<count($childrenMoneyLog);$i++){
+            $childrenMoney+=$childrenMoneyLog[$i]['money'];
+        }
+        for($i=0;$i<count($grandChildrenMoneyLog);$i++){
+            $grandChildrenMoney+=$grandChildrenMoneyLog[$i]['money'];
+        }
+        for($i=0;$i<count($greatGrandChildrenMoneyLog);$i++){
+            $greatGrandChildrenMoney+=$greatGrandChildrenMoneyLog[$i]['money'];
+        }
+        if(!($userinfo[0]['childdis']==$childrenMoney&&$userinfo[0]['grandchilddis']==$grandChildrenMoney&&$userinfo[0]['greatgrandchilddis']==$greatGrandChildrenMoney)){
+            return $this->patDao->updateUserScore($openid,$childrenMoney,$grandChildrenMoney,$greatGrandChildrenMoney);
+        }
+        return true;
     }
 
     public function getSettings(){

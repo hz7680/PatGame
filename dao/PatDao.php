@@ -48,6 +48,11 @@ class PatDao{
         return true;
     }
 
+    public function updateUserScore($openid,$childdis,$grandchilddis,$greatgrandchilddis){
+        $sql="update t_user set childdis=$childdis,grandchilddis=$grandchilddis,greatgrandchilddis=$greatgrandchilddis where openid='$openid'";
+        return $this->sqlhelper->excuteNonQuery($sql);
+    }
+
     public function getChildren($openid){
         $sql="select * from t_relationtree where superioropenid='$openid'";
         return $this->sqlhelper->excuteDataArray($sql);
