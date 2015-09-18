@@ -127,7 +127,24 @@ class PatService{
         return $this->patDao->setSettings($key,$word);
     }
 
-    public function getUserList($pagenum){
-
+    public function getUserList($arr){
+        $settings=$this->getSettings();
+        $totalcount=$this->patDao->getUserListCount($arr,$settings);
+        $totalpagecount=ceil($totalcount/PAGESIZE);
+        if($totalpagecount<=0){
+            $totalpagecount=1;
+        }
+        $pagenum=1;
+        if(isset($arr['pagenum'])){
+            $pagenum=$arr['pagenum'];
+            if($pagenum<1){
+                $pagenum=1;
+            }
+            if($pagenum>$totalpagecount){
+                $pagenum=$totalpagecount;
+            }
+        }
+        $list=$this->patDao->getUserList($arr,$settings,$pagenum,PAGESIZE);
+        return array('totalcount'=>$totalcount,'totalpagecount'=>$totalpagecount,'pagenum'=>$pagenum,'list'=>$list);
     }
 }

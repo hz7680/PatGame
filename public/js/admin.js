@@ -9,6 +9,10 @@ function refresh(){
     location.reload(true);
 }
 
+function viewUserInfo(id){
+    location.href='userinfo.php?id='+id;
+}
+
 $(function(){
     var page=$("#pagetag").val();
     $("#"+page).addClass('on');

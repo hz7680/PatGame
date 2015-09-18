@@ -1,22 +1,22 @@
 <?php
-require_once '../common/set_inc_admin.php';
-if(isset($_POST['submit'])){
-    if($_POST['op']=='percent'){
-        if($patService->setSettings('childpercent',$_POST['childpercent']/100)&&$patService->setSettings('grandchildpercent',$_POST['grandchildpercent']/100)&&$patService->setSettings('greatgrandchildpercent',$_POST['greatgrandchildpercent']/100)){
-            alertjump('修改成功','score.php');
-        }else{
-            alertback('修改失败');
+    require_once '../common/set_inc_admin.php';
+    if(isset($_POST['submit'])){
+        if($_POST['op']=='percent'){
+            if($patService->setSettings('childpercent',$_POST['childpercent']/100)&&$patService->setSettings('grandchildpercent',$_POST['grandchildpercent']/100)&&$patService->setSettings('greatgrandchildpercent',$_POST['greatgrandchildpercent']/100)){
+                alertjump('修改成功','score.php');
+            }else{
+                alertback('修改失败');
+            }
         }
-    }
-    if($_POST['op']=='rate'){
-        if($patService->setSettings('rate',$_POST['rate'])){
-            alertjump('修改成功','score.php');
-        }else{
-            alertback('修改失败');
+        if($_POST['op']=='rate'){
+            if($patService->setSettings('rate',$_POST['rate'])){
+                alertjump('修改成功','score.php');
+            }else{
+                alertback('修改失败');
+            }
         }
+        exit();
     }
-    exit();
-}
-$data=$patService->getSettings();
-$smarty->assign('data',$data);
-$smarty->display('score.html');
+    $data=$patService->getSettings();
+    $smarty->assign('data',$data);
+    $smarty->display('score.html');

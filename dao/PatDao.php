@@ -108,4 +108,30 @@ class PatDao{
         $sql="update t_settings set word='$word' where `key`='$key'";
         return $this->sqlhelper->excuteNonQuery($sql);
     }
+
+    public function getSqlParameters($arr,$settings){
+        $require="";
+        if(isset($arr['minScore'])&&!empty($arr['minScore'])){
+            $require.=" and (childdis*".$settings['childpercent']."+grandchilddis*".$settings['grandchildpercent']."+greatgrandchilddis*".$settings['greatgrandchildpercent'].")>=".$arr['minScore']/$settings['rate'];
+        }
+        if(isset($arr['maxScore'])&&!empty($arr['maxScore'])){
+            $require.=" and (childdis*".$settings['childpercent']."+grandchilddis*".$settings['grandchildpercent']."+greatgrandchilddis*".$settings['grandchildpercent'].")<=".$arr['maxScore']/$settings['rate'];
+        }
+        if(isset($arr['username'])&&!empty($arr['username'])){
+            $require.=" and username like '%".$arr['username']."%'";
+        }
+        return $require;
+    }
+
+    public function getUserListCount($arr,$settings){
+        $require=$this->getSqlParameters($arr,$settings);
+        $sql="select count(*) from t_user where isdeleted=0 $require";
+        return $this->sqlhelper->excuteScalar($sql);
+    }
+
+    public function getUserList($arr,$settings,$pagenum,$pagesize){
+        $require=$this->getSqlParameters($arr,$settings);
+        $sql="select * from t_user where isdeleted=0 $require limit ".($pagenum-1)*$pagesize.",".($pagenum*$pagesize-1);
+        return $this->sqlhelper->excuteDataArray($sql);
+    }
 }
